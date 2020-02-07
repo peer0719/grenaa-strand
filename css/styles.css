@@ -1,0 +1,45 @@
+@charset "UTF-8";
+#main-nav {
+  background-color: #B2DFFB;
+  font-size: 25px; }
+  #main-nav ul {
+    width: 100%; }
+    #main-nav ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+  #main-nav li {
+    float: left;
+    width: 12%; }
+    @media screen and (max-width: 600px) {
+      #main-nav li {
+        width: 100%; } }
+  #main-nav a {
+    color: #f8f9fb;
+    text-decoration: none;
+    padding: 10%;
+    display: block;
+    text-align: center; }
+    #main-nav a:hover {
+      background: gold; }
+
+#table {
+  background: #f8f9fb; }
+  #table tr {
+    width: 100%; }
+  #table th {
+    float: left;
+    width: 20%; }
+    @media screen and (max-width: 600px) {
+      #table th {
+        width: 100€; } }
+
+header h1 {
+  font-size: 25px;
+  color: #b17feb;
+  text-align: center; }
+
+header h2 {
+  font-size: 25px;
+  color: #b17feb;
+  text-align: center; }

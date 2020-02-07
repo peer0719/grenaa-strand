@@ -1,0 +1,81 @@
+@import "_variables";
+@import "_mixins";
+
+
+
+//Farver
+$green: #B2DFFB;
+$purple: rgb(177, 127, 235);
+$blue:#5F6CAF;
+$offwhite: #f8f9fb;
+
+
+//Fondstørrelse
+$font-size: 25px;
+
+//nested variabler
+#main-nav{
+    background-color: $green;
+    font-size: $font-size;
+
+    ul{
+        width: 100%;
+    //pseudo-classe (kan laves til en mixin)
+        &:after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+    }
+
+    li{
+        float:left ;
+        width: 12%;
+        @include mq(600px){
+            width: 100%;
+        }
+    }
+
+    a{
+        color: $offwhite;
+        text-decoration: none;
+        padding: 10%;
+        display: block;
+        text-align: center;
+    //pseudo-classe (kan laves til en mixin)
+        &:hover{
+            background: gold;
+        }
+    }
+}   
+
+#table{
+    background: $offwhite;
+    tr{
+        width: 100%;
+    }
+    th{
+        float: left;
+        width: (100% /5);
+        @include mq(600px){
+            width: 100€;
+        }
+    }
+
+}
+
+// almindelig variabel
+header h1{
+    font-size: $font-size;
+    color: $purple;
+    text-align: center;
+}
+
+header h2{
+    font-size: $font-size;
+    color: $purple;
+    text-align: center;
+}
+
+
+
