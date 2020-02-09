@@ -7,7 +7,8 @@
 $green: #B2DFFB;
 $purple: rgb(177, 127, 235);
 $blue:#5F6CAF;
-$offwhite: #f8f9fb;
+$offwhite: red;
+$gold: gold;
 
 
 //Fondstørrelse
@@ -30,7 +31,7 @@ $font-size: 25px;
 
     li{
         float:left ;
-        width: 12%;
+        width: 11%;
         @include mq(600px){
             width: 100%;
         }
@@ -49,20 +50,33 @@ $font-size: 25px;
     }
 }   
 
-#table{
-    background: $offwhite;
-    tr{
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: $green;
+    @include mq(600px){
         width: 100%;
-    }
-    th{
-        float: left;
-        width: (100% /5);
-        @include mq(600px){
-            width: 100€;
-        }
     }
 
 }
+
+.flex-container>div{
+    width: 24%;
+    line-height: 100px;
+    margin: 1px;
+    padding: 1px;
+    text-align: center;
+    @include mq(600px){
+        width: 100%;
+        &:after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+    }
+    }
+
+
 
 // almindelig variabel
 header h1{
@@ -76,6 +90,3 @@ header h2{
     color: $purple;
     text-align: center;
 }
-
-
-
